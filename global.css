@@ -1,16 +1,15 @@
 :root {
   --primary-color: #326291;
-  --light-bg-color: rgba(50, 98, 145, 0.15);
-  --text-color: #212121;
-  --white-color: #ffffff;
-  --secondary-color: #8baabd;
+  --text-dark: #212121;
+  --background-light: #ffffff;
+  --background-accent: rgba(50, 98, 145, 0.15);
 }
 
 body {
   margin: 0;
-  font-family: 'Noto Sans TC', sans-serif;
-  background-color: var(--white-color);
-  color: var(--text-color);
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-dark);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,31 +18,32 @@ body {
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .container {
-  width: 100%;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .section-title {
   color: var(--primary-color);
-  font-family: 'Noto Sans TC', sans-serif;
   font-weight: 900;
   font-size: 36px;
   line-height: 52px;
   text-align: center;
-  margin: 0 0 50px 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 768px) {
   .container {
-    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    line-height: 1.4;
   }
 }
