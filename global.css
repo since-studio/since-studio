@@ -8,9 +8,6 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   margin: 0;
   font-family: 'Noto Sans TC', sans-serif;
   background-color: var(--white-color);
@@ -51,7 +48,3 @@ a {
     max-width: 1200px;
   }
 }
-
-.site-wrapper {
-  flex: 1;
-  }
