@@ -55,3 +55,7 @@ a {
     max-width: 1200px;
   }
 }
+
+.site-wrapper {
+  flex: 1;
+  }
