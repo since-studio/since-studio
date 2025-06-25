@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>欣思工作室｜服務項目</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:header */
+.site-header {
+  background-color: var(--color-background);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 60px;
+  display: block;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  color: var(--color-primary-text);
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-footer-bg);
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .main-nav ul {
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .main-nav a {
+    font-size: 16px;
+  }
+}
+
+/* CSS for section section:services */
+.services-section {
+  padding: 50px 0;
+  background-color: var(--color-background);
+}
+
+.section-title {
+  color: var(--color-primary-text);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 52px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 44px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 25px 15px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.card-title {
+  color: var(--color-primary-text);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0;
+}
+
+.service-icon {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.service-description {
+  color: var(--color-primary-text);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: left;
+  white-space: pre-line;
+  margin: 0;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    padding: 20px;
+  }
+  .service-description {
+    font-size: 16px;
+  }
+}
+
+/* CSS for section section:footer */
+.site-footer {
+  background-color: var(--color-footer-bg);
+  padding: 12px 0;
+}
+
+.site-footer p {
+  color: var(--color-footer-text);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .site-footer p {
+    font-size: 14px;
+  }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-container">
+        <a href="#" class="logo">
+            <img src="images/24cc34a7c7b77a09a242f1ac228c2404152905f4.png" alt="欣思工作室 Since Studio Logo">
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">關於欣思</a></li>
+                <li><a href="#services">服務項目</a></li>
+                <li><a href="#works">精選作品</a></li>
+                <li><a href="#contact">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+  <section id="services" class="services-section">
+    <div class="container">
+      <h1 class="section-title">服務項目｜Services</h1>
+      <div class="services-grid">
+        <article class="service-card">
+          <h2 class="card-title">文字設計</h2>
+          <img class="service-icon" src="images/ec82cc2b01177d98823bb9141084d4ae79e14495.png" alt="文字設計 icon">
+          <p class="service-description">✔️ 品牌標準字設計
+     不同字體打造專屬風格。
+
+✔ 客製化手寫短句
+     傳遞情感與溫度。
+
+✔ 適用：
+     標語、字卡、標準字。</p>
+        </article>
+        <article class="service-card">
+          <h2 class="card-title">插畫繪圖</h2>
+          <img class="service-icon" src="images/45d683b29123acfbf971171ad3d4a6a0e0fe4680.png" alt="插畫繪圖 icon">
+          <p class="service-description">✔️ 客製化插畫創作
+     多種風格可以選擇。
+
+✔ 文字結合圖像
+     豐富故事與視覺層次。
+
+✔ 適用：
+     明信片、貼紙、手帳。</p>
+        </article>
+        <article class="service-card">
+          <h2 class="card-title">社群圖像</h2>
+          <img class="service-icon" src="images/69f3b8cb52543ce186727e6d98195848b03c37b8.png" alt="社群圖像 icon">
+          <p class="service-description">✔️ 圖文排版設計
+     打造專屬社群風格。
+
+✔ 手寫元素搭配背景
+     讓貼文更有溫度與故事性
+
+✔ 適用：
+     社群貼文、生活日誌。</p>
+        </article>
+        <article class="service-card">
+          <h2 class="card-title">客製化商品</h2>
+          <img class="service-icon" src="images/892b5641f2cc4d00754b88f14cffaf5b836bddb3.png" alt="客製化商品 icon">
+          <p class="service-description">✔️ 手寫與插畫
+     應用於各類實體商品設計     
+
+✔ 客製專屬禮物
+     傳遞心意與品牌故事。
+
+✔ 適用：
+     紀念禮物、活動贈品。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 SINCE Studio All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
