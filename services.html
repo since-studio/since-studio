@@ -14,61 +14,75 @@
   <style id="sections-styles">
 /* CSS for section section:header */
 .site-header {
-  background-color: var(--color-background);
-  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
-  padding: 10px 0;
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  height: 100px;
+  display: flex;
+  align-items: center;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 20px;
+  gap: 20px;
 }
 
 .logo img {
-  height: 60px;
   display: block;
+  height: 60px;
+  width: auto;
 }
 
 .main-nav ul {
   display: flex;
-  align-items: center;
-  gap: 40px;
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 40px;
 }
 
 .main-nav a {
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 27px;
-  color: var(--color-primary-text);
+  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-    color: var(--color-footer-bg);
+  color: var(--primary-color);
+}
+
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-color);
+  border-radius: 2px;
 }
 
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    gap: 15px;
+  .main-nav {
+    display: none;
   }
-  .main-nav ul {
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .main-nav a {
-    font-size: 16px;
+  .mobile-nav-toggle {
+    display: flex;
   }
 }
 
@@ -182,19 +196,19 @@
 </head>
 <body>
 <header class="site-header">
-    <div class="header-container">
-        <a href="#" class="logo">
-            <img src="images/24cc34a7c7b77a09a242f1ac228c2404152905f4.png" alt="欣思工作室 Since Studio Logo">
-        </a>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#about">關於欣思</a></li>
-                <li><a href="#services">服務項目</a></li>
-                <li><a href="#works">精選作品</a></li>
-                <li><a href="#contact">聯絡我們</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="container header-container">
+    <a href="index.html" class="logo">
+      <img src="images/24cc34a7c7b77a09a242f1ac228c2404152905f4.png" alt="Since Studio Logo">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="about.html">關於欣思</a></li>
+        <li><a href="services.html">服務項目</a></li>
+        <li><a href="works.html">精選作品</a></li>
+        <li><a href="contact.html">聯絡我們</a></li>
+      </ul>
+    </nav>
+</div>
 </header>
 <main>
   <section id="services" class="services-section">
