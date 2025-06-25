@@ -7,15 +7,11 @@
   --footer-text-color: #ffffff;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
   font-family: 'Noto Sans TC', sans-serif;
   background-color: var(--white-color);
   color: var(--text-color);
