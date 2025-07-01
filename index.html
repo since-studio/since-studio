@@ -70,7 +70,7 @@
 .mobile-nav-toggle::before {
   content: "";
   position: absolute;
-  background-color: black;
+  background-color: var(--primary-color);
   height: 2px;
   left: 2px;
   width: 36px;
@@ -98,7 +98,16 @@
     transition: right 0.8s ease-in-out;
   }
 
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+    
   .main-nav a {
+    writing-mode: horizontal-tb;
     display: block;
     color: white;
     padding: 10px 20px;
