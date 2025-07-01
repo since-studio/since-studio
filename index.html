@@ -103,11 +103,26 @@
     
 @media (max-width: 768px) {
   .main-nav {
-    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: #000000B3;
+    top: 94px;
+    width: 50%;
+    height: calc(100vh-94px);
+    padding: 20px;
+    right: -100%;
+    transition: right 0.8s ease-in-out;
   }
   .mobile-nav-toggle {
-    display: flex;
-  }
+    color: white;
+    padding: 24px 32px;
+    }
+  .menuBtn {
+    display: black;
+    }
+  #menu_control: checked ~ .main-nav {
+    right: 0px;
+ } 
 }
 
 /* CSS for section section:hero */
