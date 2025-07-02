@@ -233,36 +233,6 @@
   border-radius: 25px;
 }
 
-.carousel-nav {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  pointer-events: none;
-}
-
-.carousel-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  pointer-events: all;
-  padding: 10px;
-  transition: transform 0.3s ease;
-}
-
-.carousel-btn:hover {
-    transform: scale(1.1);
-}
-
-.carousel-btn img {
-  width: 70px;
-  height: 70px;
-}
-
 .carousel-indicators {
   display: flex;
   justify-content: center;
@@ -393,25 +363,39 @@
 <section id="portfolio" class="portfolio-section">
   <div class="container portfolio-container">
     <h2 class="section-title">精選作品</h2>
-    <div class="carousel">
-      <img class="carousel-image" src="images/a3006dc5966277727e7a1ad6800881edd0cc122e.png" alt="A circular product with a night sky and mountain design.">
-      <div class="carousel-nav">
-        <button class="carousel-btn prev" aria-label="Previous slide">
-          <img src="images/I128_97_128_104.svg" alt="Previous">
-        </button>
-        <button class="carousel-btn next" aria-label="Next slide">
-          <img src="images/I128_97_128_105.svg" alt="Next">
-        </button>
-      </div>
-    </div>
-    <!--合併圖片-->
     <div class="carousel-indicators">
-      <img src="images/I128_97_128_107.svg" alt="Go to slide 1" class="indicator active">
-      <img src="images/I128_97_128_108.svg" alt="Go to slide 2" class="indicator">
-      <img src="images/I128_97_128_109.svg" alt="Go to slide 3" class="indicator">
-      <img src="images/I128_97_128_110.svg" alt="Go to slide 4" class="indicator">
-      <img src="images/I128_97_128_111.svg" alt="Go to slide 5" class="indicator">
+     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
     </div>
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/a3006dc5966277727e7a1ad6800881edd0cc122e.png" class="d-block w-100" alt="magnet">
+    </div>
+    <div class="carousel-item">
+      <img src="images/15ccc450d16ac63c40056c9e1ed77629dfab0e0c" class="d-block w-100" alt="keychain">
+    </div>
+    <div class="carousel-item">
+      <img src="images/bd9f9f5c611645f0beb2eff7ac8ae7235f750505" class="d-block w-100" alt="coasters">
+    </div>
+    <div class="carousel-item">
+      <img src="images/63841c4166c7684a31f82d75fa5aaebac6f0d33d" class="d-block w-100" alt="sticker">
+    </div>
+    <div class="carousel-item">
+      <img src="images/4d689d51f3779cdfc81e343fdc62cce9da81be0f" class="d-block w-100" alt="card">
+    </div>    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
     <a href="works.html" class="more-works-btn">看更多作品</a>
   </div>
 </section>
