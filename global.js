@@ -1,12 +1,34 @@
-<script>
-  const toggleButton = document.querySelector('.mobile-nav-toggle');
-  const navMenu = document.querySelector('.main-nav');
+const indicators = document.querySelectorAll(".indicator");
+const images = document.querySelectorAll("img");
+const gallery = document.querySelector(".gallery");
 
-  toggleButton.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const targetIndex = entry.target.dataset.index;
+      if (entry.isIntersecting) {
+        indicators[targetIndex].classList.add("active");
+      } else {
+        indicators[targetIndex].classList.remove("active");
+      }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "0px 0px 0px 0px",
+    threshold: 0.5,
+  }
+);
 
-    // 可選：更新 aria 屬性（無障礙設計）
-    const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
-    toggleButton.setAttribute('aria-expanded', !expanded);
+indicators.forEach((element, index) => {
+  element.addEventListener("click", () => {
+    images[index].scrollIntoView({
+      block: "center",
+      behavior: "smooth",
+    });
   });
-</script>
+});
+
+images.forEach((element) => {
+  observer.observe(element);
+});
