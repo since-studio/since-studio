@@ -12,6 +12,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="global.css">
   <style id="sections-styles">
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+    
+#container {
+  min-height: 100%;
+  position: relative;
+}
+    
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+    
 /* CSS for section section:header */
 .site-header {
   background-color: var(--white-color);
@@ -163,17 +184,24 @@
 
 /* CSS for section section:footer */
 .site-footer {
-    background-color: var(--primary-color);
-    color: var(--footer-text-color);
-    padding: 12px 0;
-    text-align: center;
-  }
+  background-color: var(--primary-color);
+  color: var(--footer-text-color);
+  padding: 18px 0;
+  text-align: center;
+}
 
+.site-footer p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
   .site-footer p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
   }
+}
   </style>
   <script src="global.js" defer></script>
 </head>
@@ -192,9 +220,10 @@
       </ul>
     </nav>
    </div>
-  </header>
-</section>
-<section id="contact" class="contact-section">
+</header>
+  <div class="wrapper">
+    <main class="main-content">
+  <section id="contact" class="contact-section">
   <div class="container">
     <div class="title-container">
       <h1 class="section-title">聯絡我們</h1>
@@ -225,6 +254,7 @@
     </div>
   </div>
 </section>
+    </main>
 <section id="section-footer">
   <footer class="site-footer">
     <div class="container">
