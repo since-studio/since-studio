@@ -236,22 +236,10 @@
   max-width: 1075px;
 }
 
-.indicator {
-  width: 12px;
-  height: 12px;
-  cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
-}
-
-.indicator.active,
-.indicator:hover {
-  opacity: 1;
-}
-
 .gallery {
-  height: 530.2px;
+  height: 530px;
   width: 707px;
+  border-radius: 25px;
   position: relative;
 }
 
@@ -295,7 +283,6 @@ img {
 .more-works-btn {
   background-color: var(--secondary-color);
   color: var(--white-color);
-  justify-content: center;
   align-items: center;
   padding: 10px 20px;
   border-radius: 99px;
@@ -304,7 +291,7 @@ img {
   line-height: 36px;
   min-width: 160px;
   text-align: center;
-  margin-top: 30px;
+  margin: 50px 0 50px 0;
   transition: background-color 0.3s ease;
 }
 
@@ -312,25 +299,12 @@ img {
   background-color: #7a98b0;
 }
 
-@media (max-width: 900px) {
-  .carousel-nav {
-    position: static;
-    transform: none;
-    width: 100%;
-    margin-top: 10px;
-  }
-  .carousel {
-    flex-direction: column;
-  }
-  .carousel-image {
-    order: 1;
-  }
-  .carousel-nav {
-    order: 2;
-  }
-  .carousel-btn img {
-    width: 50px;
-    height: 50px;
+@media (max-width: 768px) {
+  .gallery {
+    height: 217px;
+    width: 290px;
+    border-radius: 25px;
+    position: relative;
   }
 }
 
