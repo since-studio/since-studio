@@ -12,6 +12,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="global.css">
   <style id="sections-styles">
+.html, body {
+  height: 100%;
+}
+#container {
+  min-height: 100%;
+  position: relative;
+}
+  
 /* CSS for section section:header */
 .site-header {
   background-color: var(--white-color);
@@ -220,6 +228,7 @@
 
 /* CSS for section section:footer */
 .site-footer {
+  position: absolute;
   bottom: 0;
   background-color: var(--primary-color);
   color: var(--footer-text-color);
