@@ -236,59 +236,6 @@
   max-width: 1075px;
 }
 
-.carousel {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-image {
-  display: block;
-  width: 100%;
-  max-width: 707px;
-  height: auto;
-  border-radius: 25px;
-}
-
-.carousel-nav {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  pointer-events: none;
-}
-
-.carousel-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  pointer-events: all;
-  padding: 10px;
-  transition: transform 0.3s ease;
-}
-
-.carousel-btn:hover {
-    transform: scale(1.1);
-}
-
-.carousel-btn img {
-  width: 70px;
-  height: 70px;
-}
-    
-.carousel-indicators {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
 .indicator {
   width: 12px;
   height: 12px;
@@ -348,6 +295,8 @@ img {
 .more-works-btn {
   background-color: var(--secondary-color);
   color: var(--white-color);
+  justify-content: center;
+  align-items: center;
   padding: 10px 20px;
   border-radius: 99px;
   font-weight: 700;
