@@ -198,13 +198,11 @@ html, body {
   max-width: 468px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .about-subtitle {
   font-size: 28px;
   font-weight: 400;
-  line-height: 48px;
   color: var(--primary-text-color);
 }
 
@@ -226,6 +224,9 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .about-content {
+    gap: 0px;
+  }
   .about-section {
     padding: 50px 20px;
   }
