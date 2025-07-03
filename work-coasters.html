@@ -6,43 +6,69 @@
   <title>Generated Page</title>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>客製化 – 冰箱磁鐵</title>
+<title>陶瓷杯墊</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="global.css">
   <style id="sections-styles">
+html, body {
+  height: 100%;
+  margin: 0;
+}
+    
+#container {
+  min-height: 100%;
+  position: relative;
+}
+    
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+        
 /* CSS for section section:header */
 .site-header {
-  background-color: var(--background-color);
-  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
-  padding: 20px 0;
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .logo img {
+  display: block;
   height: 60px;
   width: auto;
 }
 
-.main-nav {
+.main-nav ul {
   display: flex;
-  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   gap: 40px;
 }
 
 .main-nav a {
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
   color: var(--text-color);
   transition: color 0.3s ease;
 }
@@ -51,19 +77,80 @@
   color: var(--primary-color);
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
+.mobile-nav-toggle {
   cursor: pointer;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  top: 20px;
+  right: 20px;
+  display: none;
 }
 
+.mobile-nav-toggle span {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  display: block; 
+ } 
+  
+.mobile-nav-toggle::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 2px;
+  width: 36px;
+  top: 0;
+  box-shadow: 0px 12px 0px black, 0px -12px 0px black;
+  right: 0;
+ } 
+
+#menu_control {
+  display: none;
+} 
+    
 @media (max-width: 768px) {
   .main-nav {
+    position: fixed;
+    flex-direction: column;
+    background-color: #326291;
+    top: 100px;
+    width: 50%;
+    height: calc(100vh - 100px);
+    padding: 40px;
+    right: -100%;
+    transition: right 0.8s ease-in-out;
+  }
+  
+  .main-nav::-webkit-scrollbar {
     display: none;
   }
-  .menu-toggle {
-    display: block;
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+  }
+    
+  .main-nav a {
+    writing-mode: horizontal-tb;
+    color: white;
+    padding: 10px 20px;
+  }
+
+  .main-nav a:hover {
+    color: var(--secondary-color);
+  }
+    
+  .mobile-nav-toggle {
+    display: block;  
+  }
+
+  #menu_control:checked ~ .main-nav {
+    right: 0px;
   }
 }
 
@@ -76,13 +163,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 0px;
 }
 
 .product-title {
   font-size: 36px;
   font-weight: 900;
-  line-height: 52px;
   color: var(--text-color);
   text-align: center;
 }
@@ -123,11 +209,10 @@
     padding: 30px 0;
   }
   .product-details .container {
-    gap: 30px;
+    gap: 0px;
   }
   .product-title {
     font-size: 28px;
-    line-height: 1.4;
   }
   .concept-title {
     font-size: 20px;
@@ -135,69 +220,67 @@
   .concept-text {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 24px;
   }
 }
 
 /* CSS for section section:footer */
 .site-footer {
-  background-color: var(--primary-color);
-  color: var(--background-color);
-  padding: 12px 0;
-}
-
-.site-footer .container {
-  text-align: center;
-}
+    background-color: var(--primary-color);
+    color: var(--footer-text-color);
+    padding: 12px 0;
+    text-align: center;
+  }
 
 .site-footer p {
+  margin: 0;
   font-size: 16px;
-  font-weight: 400;
   line-height: 24px;
+  font-weight: 400;
 }
-
-@media (max-width: 768px) {
-  .site-footer p {
-    font-size: 14px;
-  }
-}
+    
   </style>
   <script src="global.js" defer></script>
 </head>
 <body>
 <header class="site-header">
   <div class="container header-container">
-    <a href="#" class="logo">
+    <a href="index.html" class="logo">
       <img src="images/24cc34a7c7b77a09a242f1ac228c2404152905f4.png" alt="Since Studio Logo">
     </a>
+
+    <input type="checkbox" id="menu_control">
+    <label for="menu_control" class="mobile-nav-toggle"></label>
+    
     <nav class="main-nav">
-      <a href="#about">關於欣思</a>
-      <a href="#services">服務項目</a>
-      <a href="#work">精選作品</a>
-      <a href="#contact">聯絡我們</a>
+      <ul>
+        <li><a href="about.html">關於欣思</a></li>
+        <li><a href="services.html">服務項目</a></li>
+        <li><a href="works.html">精選作品</a></li>
+        <li><a href="contact.html">聯絡我們</a></li>
+      </ul>
     </nav>
-    <button class="menu-toggle" aria-label="Open menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 12H21" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M3 6H21" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M3 18H21" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
   </div>
 </header>
-<main class="product-details">
+   <div class="wrapper">
+    <main class="main-content">
+<section class="product-details">
   <div class="container">
-    <h1 class="product-title">冰箱磁鐵</h1>
+    <h1 class="product-title">陶瓷杯墊</h1>
     <div class="product-image-wrapper">
-      <img src="images/a3006dc5966277727e7a1ad6800881edd0cc122e.png" alt="VI-冰箱磁鐵" class="product-image">
+      <img src="images/a3006dc5966277727e7a1ad6800881edd0cc122e.png" alt="陶瓷杯墊" class="product-image">
     </div>
     <section class="product-concept">
       <h2 class="concept-title">設計理念</h2>
       <p class="concept-text">
-        這款冰箱磁鐵以夜晚的星空與山影為背景，搭配莎士比亞《麥克白》的經典台詞：「黑夜無論怎樣悠長，白晝總會到來。」文字以手寫字體呈現，讓簡單的一句話蘊含溫暖的力量，營造靜謐又帶點神祕的視覺氛圍。<br>
-        無論身處什麼樣的低潮或挑戰，鼓勵人們保持樂觀，相信一切終將好轉。磁鐵為簡約圓型設計，適合吸附於冰箱、磁性白板、辦公區等空間。除了實用，也具有裝飾與療癒功能，亦可客製化專屬文字，成為送給朋友的一份溫暖禮物。
+        這款杯墊以夕陽與山景作為背景，選用柔和的粉色漸層，搭配手寫的祝福文字，希望在使用者在喝杯水、泡杯茶的片刻，也能獲得內心的平靜與安慰。
+      </p>
+      <p class="concept-text">
+        杯墊選用陶瓷吸水材質以及防滑背層，實用與美觀兼具。適合日常居家、辦公空間，也可以客製化文字與背景，作為節日禮物或品牌贈品皆宜，是結合實用性與情感的日常設計小物。
       </p>
     </section>
   </div>
+</section>
 </main>
 <footer class="site-footer">
   <div class="container">
