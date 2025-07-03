@@ -288,9 +288,15 @@ html, body {
   border-radius: 15px;
   height: 100%;
   width: 100%;
-  overflow-x: auto;
+  overflow-x: scroll;
+   -ms-overflow-style: none;
+  scrollbar-width: none;
   scroll-snap-type: x mandatory;
   display: flex;
+}
+
+.image-slider::-webkit-scrollbar {
+  display: none;
 }
 
 img {
