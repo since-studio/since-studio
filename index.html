@@ -284,6 +284,29 @@ html, body {
   position: relative;
 }
 
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s;
+}
+.arrow:hover {
+  background: rgba(255, 255, 255, 1);
+}
+.arrow.left {
+  left: 10px;
+}
+.arrow.right {
+  right: 10px;
+}
+    
 .image-slider {
   border-radius: 15px;
   height: 100%;
@@ -435,6 +458,10 @@ img {
   <div class="container portfolio-container">
     <h2 class="section-title">精選作品</h2>
     <div class="gallery">
+
+      <button class="arrow left" aria-label="Previous">‹</button>
+      <button class="arrow right" aria-label="Next">›</button>
+      
       <div class="image-slider">
         <img src="images/a3006dc5966277727e7a1ad6800881edd0cc122e.png" alt="magnet" data-index="0" />
         <img src="images/15ccc450d16ac63c40056c9e1ed77629dfab0e0c.png" alt="keychain" data-index="1" />
