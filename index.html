@@ -199,10 +199,22 @@ html, body {
   max-width: 992px;
   margin: 0 auto;
 }
-
+    
+.section-title {
+  color: var(--primary-color);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  text-align: center;
+  margin: 0 0 50px 0;
+  }
+    
 @media (max-width: 768px) {
   .services-grid {
     grid-template-columns: 1fr; 
+  }
+  .section-title {
+    font-size: 28px;
   }
 }
 
@@ -257,6 +269,15 @@ html, body {
   max-width: 1075px;
 }
 
+.section-title {
+  color: var(--primary-color);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  text-align: center;
+  margin: 0 0 50px 0;
+  }
+    
 .gallery {
   height: 530px;
   width: 100%;
@@ -328,6 +349,10 @@ img {
     width: 100%;
     position: relative;
   }
+
+  .section-title {
+    font-size: 28px;
+  }  
 }
 
 /* CSS for section section:footer */
