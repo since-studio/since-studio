@@ -1,8 +1,5 @@
 const indicators = document.querySelectorAll(".indicator");
-const images = document.querySelectorAll(".image-slider img"); // ⬅ 修正這裡
-const gallery = document.querySelector(".gallery");
-
-// intersection observer：偵測圖片是否在畫面中
+const images = document.querySelectorAll(".image-slider img");
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -12,6 +9,7 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting) {
         indicators.forEach((dot) => dot.classList.remove("active"));
         indicators[targetIndex].classList.add("active");
+        currentIndex = Number(targetIndex); // 更新目前索引
       }
     });
   },
@@ -21,21 +19,45 @@ const observer = new IntersectionObserver(
   }
 );
 
-// 點圓點 → 滾動到對應圖片
+// 初始索引值
+let currentIndex = 0;
+
+// 共用函式：切換到指定圖片
+function goToImage(index) {
+  if (index < 0) index = images.length - 1;
+  if (index >= images.length) index = 0;
+  images[index].scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "nearest",
+  });
+}
+
+// 點圓點 → 切換圖片
 indicators.forEach((element, index) => {
   element.addEventListener("click", () => {
-    images[index].scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "nearest",
-    });
+    goToImage(index);
   });
 });
 
-// 啟用觀察
+// 左右箭頭
+const leftArrow = document.querySelector(".arrow.left");
+const rightArrow = document.querySelector(".arrow.right");
+
+if (leftArrow && rightArrow) {
+  leftArrow.addEventListener("click", () => {
+    goToImage(currentIndex - 1);
+  });
+
+  rightArrow.addEventListener("click", () => {
+    goToImage(currentIndex + 1);
+  });
+}
+
+// 啟用 observer
 images.forEach((element) => {
   observer.observe(element);
 });
 
-// 初始設 active（可選）
+// 初始化
 indicators[0].classList.add("active");
