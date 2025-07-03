@@ -40,7 +40,7 @@ html, body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
 }
@@ -54,7 +54,7 @@ html, body {
 
 .logo img {
   display: block;
-  height: 60px;
+  height: 50px;
   width: auto;
   top: 20px;
   left: 20px;
@@ -83,9 +83,9 @@ html, body {
 .mobile-nav-toggle {
   cursor: pointer;
   position: relative;
-  width: 48px;
-  height: 48px;
-  top: 20px;
+  width: 36px;
+  height: 36px;
+  top: 0px;
   right: 20px;
   display: none;
 }
@@ -103,9 +103,9 @@ html, body {
   background-color: black;
   height: 2px;
   width: 36px;
-  top: 0;  
+  top: 18px;  
   box-shadow: 0px 12px 0px black, 0px -12px 0px black;
-  right: 0;
+  right: 8px;
  } 
 
 #menu_control {
@@ -113,13 +113,21 @@ html, body {
 } 
     
 @media (max-width: 768px) {
+  .logo img {
+    display: block;
+    height: 40px;
+    width: auto;
+    top: 20px;
+    left: 20px;
+  }
+  
   .main-nav {
     position: fixed;
     flex-direction: column;
     background-color: #326291;
     top: 100px;
     width: 50%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
     padding: 40px;
     right: -100%;
     transition: right 0.8s ease-in-out;
