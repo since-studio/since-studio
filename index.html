@@ -288,12 +288,17 @@ html, body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 32px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
   background: rgba(255, 255, 255, 0.8);
+  color: #333;
   border: none;
-  cursor: pointer;
-  padding: 10px 14px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   z-index: 10;
   transition: background 0.3s;
 }
@@ -301,10 +306,10 @@ html, body {
   background: rgba(255, 255, 255, 1);
 }
 .arrow.left {
-  left: 10px;
+  left: -40px;
 }
 .arrow.right {
-  right: 10px;
+  right: -40px;
 }
     
 .image-slider {
@@ -380,7 +385,13 @@ img {
 
   .section-title {
     font-size: 28px;
-  }  
+  }
+  .arrow.left {
+    left: 10px;
+  }
+  .arrow.right {
+    right: 10px;
+  }
 }
 
 /* CSS for section section:footer */
