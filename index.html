@@ -288,11 +288,11 @@ html, body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  background: rgba(255, 255, 255, 0.8);
-  color: #333;
+  width: 60px;
+  height: 60px;
+  font-size: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--primary-color);
   border: none;
   border-radius: 50%;
   display: flex;
@@ -306,10 +306,10 @@ html, body {
   background: rgba(255, 255, 255, 1);
 }
 .arrow.left {
-  left: -40px;
+  left: -60px;
 }
 .arrow.right {
-  right: -40px;
+  right: -60px;
 }
     
 .image-slider {
@@ -386,7 +386,14 @@ img {
   .section-title {
     font-size: 28px;
   }
-  .arrow.left {
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+  
+    .arrow.left {
     left: 10px;
   }
   .arrow.right {
@@ -469,15 +476,16 @@ img {
   <div class="container portfolio-container">
     <h2 class="section-title">精選作品</h2>
     <div class="gallery">
-
       <button class="arrow left" aria-label="Previous">‹</button>
-      <button class="arrow right" aria-label="Next">›</button>
-      
+            
       <div class="image-slider">
         <img src="images/a3006dc5966277727e7a1ad6800881edd0cc122e.png" alt="magnet" data-index="0" />
         <img src="images/15ccc450d16ac63c40056c9e1ed77629dfab0e0c.png" alt="keychain" data-index="1" />
         <img src="images/bd9f9f5c611645f0beb2eff7ac8ae7235f750505.png" alt="coasters" data-index="2" />
       </div>
+      
+      <button class="arrow right" aria-label="Next">›</button>
+      
       <div class="indicators">
         <div class="indicator active"></div>
         <div class="indicator"></div>
