@@ -119,7 +119,7 @@ a {
     
 @media (max-width: 768px) {
   body {
-    padding-top: 60px;
+    padding-top: 80px;
   }
   .main-nav {
     position: fixed;
