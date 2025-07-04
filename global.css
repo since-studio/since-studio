@@ -8,7 +8,7 @@
 }
 
 html, body {
-  padding-top: 80px;
+  padding-top: 40px;
   height: 100%;
   margin: 0;
   font-family: 'Noto Sans TC', sans-serif;
@@ -51,6 +51,9 @@ a {
 }
 
 .header-container {
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -119,7 +122,7 @@ a {
     
 @media (max-width: 768px) {
   body {
-    padding-top: 80px;
+    padding-top: 40px;
   }
   .main-nav {
     position: fixed;
