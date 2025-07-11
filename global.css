@@ -126,6 +126,9 @@ a {
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
+#menu_control {
+  display: none;
+
 #menu_control:checked + .mobile-nav-toggle::before {
   transform: rotate(45deg);
   top: 18px;
