@@ -90,20 +90,21 @@ a {
 
 .mobile-nav-toggle {
   cursor: pointer;
-  position: relative;
-  width: 36px;
-  height: 36px;
-  top: 0px;
-  right: 0px;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  z-index: 1100; /* 確保蓋在上方 */
 }
 
 .mobile-nav-toggle span {
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  display: block; 
- } 
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  transition: 0.4s;
+  display: block;
+}
   
 .mobile-nav-toggle::before {
   content: "";
@@ -134,14 +135,16 @@ a {
   pointer-events: none;
 }
 
-#menu_control:checked + .mobile-nav-toggle::before {
-  transform: rotate(45deg);
-  top: 18px;
+#menu_control:checked + .mobile-nav-toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
-#menu_control:checked + .mobile-nav-toggle::after {
-  transform: rotate(-45deg);
-  top: 18px;
+#menu_control:checked + .mobile-nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu_control:checked + .mobile-nav-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
     
 @media (max-width: 768px) {
