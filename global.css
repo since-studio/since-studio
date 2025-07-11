@@ -116,9 +116,33 @@ a {
   right: 8px;
  } 
 
-#menu_control {
-  display: none;
-} 
+.mobile-nav-toggle::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 2px;
+  width: 24px;
+  right: 8px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* 上下兩條線位置 */
+.mobile-nav-toggle::before {
+  top: 12px;
+}
+.mobile-nav-toggle::after {
+  top: 24px;
+}
+
+#menu_control:checked + .mobile-nav-toggle::before {
+  transform: rotate(45deg);
+  top: 18px;
+}
+
+#menu_control:checked + .mobile-nav-toggle::after {
+  transform: rotate(-45deg);
+  top: 18px;
+}
     
 @media (max-width: 768px) {
   body {
