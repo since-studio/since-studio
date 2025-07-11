@@ -127,7 +127,10 @@ a {
 }
 
 #menu_control {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
 
 #menu_control:checked + .mobile-nav-toggle::before {
   transform: rotate(45deg);
