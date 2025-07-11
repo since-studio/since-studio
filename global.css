@@ -111,7 +111,7 @@ a {
   background-color: black;
   height: 2px;
   width: 24px;
-  top: 18px;  
+  top: 12px;  
   right: 8px;
  } 
 
@@ -121,16 +121,9 @@ a {
   background-color: black;
   height: 2px;
   width: 24px;
+  top: 24px;
   right: 8px;
   transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-/* 上下兩條線位置 */
-.mobile-nav-toggle::before {
-  top: 12px;
-}
-.mobile-nav-toggle::after {
-  top: 24px;
 }
 
 #menu_control:checked + .mobile-nav-toggle::before {
