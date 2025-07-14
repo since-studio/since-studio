@@ -70,6 +70,7 @@ html, body {
 }
 
 .card-image-wrapper {
+  position: relative;
   width: 100%;
   aspect-ratio: 310 / 207;
   overflow: hidden;
@@ -79,8 +80,30 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: filter 0.3s ease;
 }
 
+.work-card:hover .card-image-wrapper img {
+  filter: brightness(60%);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.work-card:hover .overlay-text {
+  opacity: 1; /* 滑過時顯示文字 */
+}
+    
 .card-caption {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
@@ -141,6 +164,8 @@ html, body {
         <a href="work-magnet.html">
           <div class="card-image-wrapper">
           <img src="images/a3006dc5966277727e7a1ad6800881edd0cc122e.png" alt="冰箱磁鐵">
+          <div class="overlay-text">詳細內容</div>
+          </div>
         </a>
         </div>
         <p class="card-caption">冰箱磁鐵</p>
